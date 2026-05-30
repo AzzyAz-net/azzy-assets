@@ -1,0 +1,61 @@
+
+@import url(https://fonts.bunny.net/css?family=caveat:600|inter:400,500,600,700|jetbrains-mono:400|newsreader:400,400i,500,500i,600,600i);
+
+/* Light-black background and base text styles */
+
+/* Make all pages centered both vertically and horizontally */
+html, body {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f0f0f; /* very dark gray (light black) */
+  color: #e6e6e6; /* soft light text for contrast */
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+
+  display: flex;
+  flex-direction: column; /* stack content vertically */
+  align-items: center; /* center container horizontally */
+  justify-content: center; /* center container vertically */
+  gap: 1rem;
+  text-align: left; /* left-align text inside the centered container */
+  padding: 2rem;
+}
+
+/* Constrain direct page content for readable lines on large screens */
+main, .page, body > * {
+  width: 100%;
+  max-width: 80ch;
+}
+
+/* Remove default top/bottom margins and set heading alignment */
+h1, h2, h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center; /* center headings for this and future pages */
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left; /* keep paragraph/body text left-aligned */
+}
+
+/* Provide controlled spacing between blocks */
+.page > * + * {
+  margin-top: 0.75rem;
+}
+
+/* Utility to center specific elements while keeping body text left-aligned */
+.center {
+  text-align: center;
+}
+
